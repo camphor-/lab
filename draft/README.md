@@ -9,6 +9,11 @@ CAMPHOR- Lab はプロダクトを作りたい学生やプロジェクトを始�
 - [プロジェクトに参加する](#プロジェクトに参加する)
 - [コミュニティ](#コミュニティ)
 
+## CAMPHOR- Lab に参加する
+
+CAMPHOR- の Slack の #lab チャンネルに参加してください。GitHub の CAMPHOR- Org.で lab チームに招待します。
+CAMPHOR- の Slack に入っていない場合は CAMPHOR- HOUSE に遊びに来てください！
+
 ## 新しいアイディアを提案する
 
 ![](/assets/connect-idea.png)
@@ -34,7 +39,3 @@ etc.
 ## プロジェクトに参加する
 
 [Issue](https://github.com/camphor-/lab/issues)でアイディアを探しましょう。参加したいアイディアを見つけたら、コメントしましょう！
-
-## コミュニティ
-
-CAMPHOR- の Slack の #lab チャンネルで CAMPHOR- Lab のメンバーと交流できます。CAMPHOR- の Slack に入っていない場合は CAMPHOR- HOUSE に遊びに来てください！
