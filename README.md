@@ -12,7 +12,7 @@ CAMPHOR- Lab はプロダクトを作りたい学生やプロジェクトを始�
 ## CAMPHOR- Lab に参加する
 
 CAMPHOR- の Slack の #lab チャンネルに参加してください。GitHub の CAMPHOR- Org.で lab チームに招待します。
-CAMPHOR- の Slack に入っていない場合は CAMPHOR- HOUSE に遊びに来てください！
+CAMPHOR- の Slack に入っていない場合は [CAMPHOR- HOUSE に遊びに来てください！](https://camph.net/schedule/)
 
 ## 新しいアイディアを提案する
 
