@@ -19,7 +19,7 @@ CAMPHOR- の Slack に入っていない場合は [CAMPHOR- HOUSE に遊びに�
 ![](/assets/connect-idea.png)
 
 [Issue](https://github.com/camphor-/lab/issues)として新しいアイディアを提案しましょう！
-「新しい Web サービスを作りたい」、「CAMPHOR- の Slack の bot に機能を追加したい」、「CAMPHOR- でイベントを開催したい」など、技術に関することならなんでも OK です!
+「新しい Web サービスを作りたい」、「CAMPHOR- の Slack の bot に機能を追加したい」、「CAMPHOR- でイベントを開催したい」など、技術に関することならなんでも OK です！最初はSlackでカジュアルにアイディアを投稿しても大丈夫です。
 
 ## CAMPHOR- のリソースを使う
 
