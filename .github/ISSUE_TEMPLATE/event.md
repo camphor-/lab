@@ -1,8 +1,8 @@
 ---
 name: イベントのアイディア
 about: HOUSEで開催したいイベントを提案
-title: "event: [イベント名]"
-labels: event, idea
+title: "event: "
+labels: event
 assignees: ""
 ---
 

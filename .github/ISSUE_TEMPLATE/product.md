@@ -1,8 +1,8 @@
 ---
 name: プロダクトのアイディア
 about: 作りたいものを提案
-title: "product: [プロダクト名]"
-labels: product, idea
+title: "product: "
+labels: product
 assignees: ""
 ---
 

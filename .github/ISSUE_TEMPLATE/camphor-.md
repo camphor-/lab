@@ -1,8 +1,8 @@
 ---
 name: CAMPHOR- のサービスに関するアイディア
-about: Slackのbotや、書籍管理システム、CAMPHOR- nowなどに関する提案
-title: "contribute: [提案名]"
-labels: contribute, idea
+about: Slackのbotや、書籍管理システム、CAMPHOR- nowなど、CAMPHOR- のサービスに関する提案
+title: "CAMPHOR-: "
+labels: CAMPHOR-
 assignees: ""
 ---
 
