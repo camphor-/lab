@@ -1,7 +1,7 @@
 <template>
   <div class="about-root">
     <div class="container">
-      <div v-in-viewport class="section join">
+      <div v-in-viewport id="join" class="section join">
         <h2 class="title">CAMPHOR- Lab に参加する</h2>
         <p>
           CAMPHOR- のSlackの #lab チャンネルに参加してください。GitHubのCAMPHOR-
@@ -18,7 +18,7 @@
           </span>
         </a>
       </div>
-      <div v-in-viewport class="section new-idea">
+      <div id="suggestion" v-in-viewport class="section new-idea">
         <h2 class="title">新しいアイディアを提案する</h2>
         <div class="columns is-vcentered">
           <div class="column is-two-fifths">
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div v-in-viewport class="section resources">
+      <div id="resources" v-in-viewport class="section resources">
         <h2 class="title">CAMPHOR- のリソースを使う</h2>
         <div class="columns is-vcentered">
           <div class="column">
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div v-in-viewport class="section projects">
+      <div id="projects" v-in-viewport class="section projects">
         <h2 class="title">プロジェクトに参加する</h2>
         <div>
           Issueでアイディアを探しましょう。参加したいアイディアを見つけたら、コメントしましょう！
