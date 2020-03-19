@@ -43,9 +43,9 @@
         </div>
       </div>
     </nav>
-    <div v-show="showMenu">
+    <div>
       <div class="menu-bg" @click="onClickMenuBg"></div>
-      <div class="menu">
+      <div class="menu" :class="{ 'menu-visible': showMenu }">
         <p class="menu-label">
           General
         </p>
@@ -134,7 +134,14 @@ export default {
   z-index: 2;
   height: 100%;
   box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.1);
+  transform: translateX(300px);
+  transition: all 0.5s ease-in-out;
+  &.menu-visible {
+    position: fixed;
+    transform: translateX(0);
+  }
 }
+
 .menu-bg {
   position: fixed;
   top: 0;
