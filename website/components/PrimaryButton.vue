@@ -32,14 +32,17 @@ export default {
 <style lang="scss" scoped>
 .button {
   margin-top: 10px;
-  border-radius: 0;
+  border-radius: 2000px;
   transition: color 0.2s;
   color: white;
   background-image: linear-gradient(60deg, orange, #ff001d);
   background-repeat: no-repeat;
+  border: none;
+
   &::before {
     transition: 0.5s ease;
     transition-property: opacity;
+    border-radius: inherit;
     background-image: linear-gradient(60deg, #ff001d, orange);
     opacity: 0;
     position: absolute;
