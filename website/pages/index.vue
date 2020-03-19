@@ -1,8 +1,10 @@
 <template>
   <div class="root">
     <navbar />
-    <hero />
-    <about />
+    <div class="parallax-root">
+      <hero />
+      <about />
+    </div>
   </div>
 </template>
 <script>
@@ -20,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
+.parallax-root {
   perspective: 100px;
   perspective-origin: top center;
   height: 100vh;
