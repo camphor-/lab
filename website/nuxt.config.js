@@ -1,5 +1,3 @@
-import path from 'path'
-
 export default {
   mode: 'universal',
   /*
@@ -29,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/in_viewport.js'],
+  plugins: ['@/plugins/in_viewport.js', '@/plugins/smooth_scroll.js'],
   /*
    ** Nuxt.js dev-modules
    */
