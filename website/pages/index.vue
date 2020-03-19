@@ -150,11 +150,12 @@ export default {
   margin-top: 10px;
   border-radius: 0;
   transition: color 0.2s;
-  color: #222;
-  background: #efefef;
+  color: white;
+  background-image: linear-gradient(60deg, orange, #ff001d);
+  background-repeat: no-repeat;
   &::before {
     transition: 0.5s ease;
-    transition-property: transform, opacity;
+    transition-property: opacity;
     background-image: linear-gradient(60deg, #ff001d, orange);
     opacity: 0;
     position: absolute;
@@ -164,14 +165,11 @@ export default {
     width: 100%;
     height: 100%;
     content: '';
-    transform: translate(3px, 3px);
   }
   &:hover {
-    background-repeat: no-repeat;
     color: white;
     &::before {
       opacity: 1;
-      transform: translate(0, 0);
     }
   }
   > .button-inner {
