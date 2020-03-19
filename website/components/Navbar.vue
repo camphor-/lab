@@ -15,7 +15,7 @@
       <div class="navbar-menu">
         <div class="navbar-end">
           <div v-for="(item, idx) in menuItems" :key="idx" class="navbar-item">
-            <a class="navbar-button" :href="item.href">
+            <a class="navbar-button" :href="item.href" :target="item.target">
               {{ item.title }}
             </a>
           </div>
@@ -27,7 +27,7 @@
       <div class="menu" :class="{ 'menu-visible': showMenu }">
         <ul class="menu-list">
           <li v-for="(item, idx) in menuItems" :key="idx">
-            <a :href="item.href">{{ item.title }}</a>
+            <a :href="item.href" :target="item.target">{{ item.title }}</a>
           </li>
         </ul>
       </div>
@@ -37,11 +37,11 @@
 
 <script>
 const menuItems = [
-  { title: '参加する', href: '#' },
-  { title: '提案する', href: '#' },
-  { title: 'リソース', href: '#' },
-  { title: 'プロジェクト', href: '#' },
-  { title: 'CAMPHOR- について', href: '#' }
+  { title: '参加する', href: '#join', target: '' },
+  { title: '提案する', href: '#suggestion', target: '' },
+  { title: 'リソース', href: '#resources', target: '' },
+  { title: 'プロジェクト', href: '#projects', target: '' },
+  { title: 'CAMPHOR- について', href: 'https://camph.net', target: '_blank' }
 ]
 
 export default {
