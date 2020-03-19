@@ -1,7 +1,7 @@
 <template>
   <div class="about-root">
     <div class="container">
-      <div v-in-viewport id="join" class="section join">
+      <div id="join" v-in-viewport class="section join">
         <h2 class="title">CAMPHOR- Lab に参加する</h2>
         <p>
           CAMPHOR- のSlackの #lab チャンネルに参加してください。GitHubのCAMPHOR-

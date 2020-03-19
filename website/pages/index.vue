@@ -1,7 +1,7 @@
 <template>
-  <div class="root">
+  <div>
     <navbar :is-top="isTop" />
-    <div class="parallax-root">
+    <div id="parallax-root">
       <hero />
       <about />
     </div>
@@ -26,7 +26,7 @@ export default {
   mounted() {
     const that = this
     document
-      .querySelectorAll('.parallax-root')[0]
+      .getElementById('parallax-root')
       .addEventListener('scroll', function() {
         that.isTop = this.scrollTop < 50
       })
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.parallax-root {
+#parallax-root {
   perspective: 100px;
   perspective-origin: top center;
   height: 100vh;

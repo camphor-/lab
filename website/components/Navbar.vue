@@ -15,7 +15,12 @@
       <div class="navbar-menu">
         <div class="navbar-end">
           <div v-for="(item, idx) in menuItems" :key="idx" class="navbar-item">
-            <a class="navbar-button" :href="item.href" :target="item.target">
+            <a
+              v-smooth-scroll
+              class="navbar-button"
+              :href="item.href"
+              :target="item.target"
+            >
               {{ item.title }}
             </a>
           </div>
