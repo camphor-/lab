@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar is-transparent">
+    <nav class="navbar is-transparent" :class="{ 'navbar-visible': isTop }">
       <a
         role="button"
         class="navbar-burger"
@@ -45,6 +45,12 @@ const menuItems = [
 ]
 
 export default {
+  props: {
+    isTop: {
+      type: Boolean,
+      required: true
+    }
+  },
   data() {
     return {
       showMenu: false,
@@ -69,6 +75,14 @@ export default {
   background: transparent;
   width: 100vw;
   padding: 15px;
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(-100px);
+
+  &.navbar-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
   > .navbar-burger {
     color: white;

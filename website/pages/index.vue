@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <navbar />
+    <navbar :is-top="isTop" />
     <div class="parallax-root">
       <hero />
       <about />
@@ -17,6 +17,19 @@ export default {
     Hero,
     Navbar,
     About
+  },
+  data() {
+    return {
+      isTop: true
+    }
+  },
+  mounted() {
+    const that = this
+    document
+      .querySelectorAll('.parallax-root')[0]
+      .addEventListener('scroll', function() {
+        that.isTop = this.scrollTop < 50
+      })
   }
 }
 </script>
