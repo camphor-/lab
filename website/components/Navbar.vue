@@ -14,79 +14,41 @@
       </a>
       <div class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
-            <a class="navbar-button" href="#">
-              CAMPHOR-
-            </a>
-          </div>
-          <div class="navbar-item">
-            <a class="navbar-button" href="#">
-              参加する
-            </a>
-          </div>
-
-          <div class="navbar-item">
-            <a class="navbar-button" href="#">
-              提案する
-            </a>
-          </div>
-          <div class="navbar-item">
-            <a class="navbar-button" href="#">
-              リソース
-            </a>
-          </div>
-          <div class="navbar-item">
-            <a class="navbar-button" href="#">
-              プロジェクト
+          <div v-for="(item, idx) in menuItems" :key="idx" class="navbar-item">
+            <a class="navbar-button" :href="item.href">
+              {{ item.title }}
             </a>
           </div>
         </div>
       </div>
     </nav>
     <div>
-      <div class="menu-bg" @click="onClickMenuBg"></div>
+      <div v-if="showMenu" class="menu-bg" @click="onClickMenuBg"></div>
       <div class="menu" :class="{ 'menu-visible': showMenu }">
-        <p class="menu-label">
-          General
-        </p>
         <ul class="menu-list">
-          <li><a>Dashboard</a></li>
-          <li><a>Customers</a></li>
-        </ul>
-        <p class="menu-label">
-          Administration
-        </p>
-        <ul class="menu-list">
-          <li><a>Team Settings</a></li>
-          <li>
-            <a class="is-active">Manage Your Team</a>
-            <ul>
-              <li><a>Members</a></li>
-              <li><a>Plugins</a></li>
-              <li><a>Add a member</a></li>
-            </ul>
+          <li v-for="(item, idx) in menuItems" :key="idx">
+            <a :href="item.href">{{ item.title }}</a>
           </li>
-          <li><a>Invitations</a></li>
-          <li><a>Cloud Storage Environment Settings</a></li>
-          <li><a>Authentication</a></li>
-        </ul>
-        <p class="menu-label">
-          Transactions
-        </p>
-        <ul class="menu-list">
-          <li><a>Payments</a></li>
-          <li><a>Transfers</a></li>
-          <li><a>Balance</a></li>
         </ul>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+const menuItems = [
+  { title: '参加する', href: '#' },
+  { title: '提案する', href: '#' },
+  { title: 'リソース', href: '#' },
+  { title: 'プロジェクト', href: '#' },
+  { title: 'CAMPHOR- について', href: '#' }
+]
+
 export default {
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      menuItems
     }
   },
   methods: {
