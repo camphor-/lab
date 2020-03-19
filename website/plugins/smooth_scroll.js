@@ -2,7 +2,7 @@
 
 import Vue from 'vue'
 
-function smoothScrollTo(
+export function smoothScrollTo(
   scrollTo,
   { duration = 1000, offset = 0, scrollRoot = window }
 ) {

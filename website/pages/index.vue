@@ -11,6 +11,7 @@
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import About from '@/components/About'
+import { smoothScrollTo } from '@/plugins/smooth_scroll'
 
 export default {
   components: {
@@ -30,6 +31,12 @@ export default {
       .addEventListener('scroll', function() {
         that.isTop = this.scrollTop < 50
       })
+
+    if (document.getElementById(location.hash.substring(1))) {
+      const scrollTo = document.getElementById(location.hash.substring(1))
+      const scrollRoot = document.getElementById('parallax-root')
+      smoothScrollTo(scrollTo, { scrollRoot })
+    }
   }
 }
 </script>
