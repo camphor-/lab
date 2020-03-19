@@ -29,15 +29,10 @@
               のSlackのbotに機能を追加したい」、「CAMPHOR-
               でイベントを開催したい」など、技術に関することならなんでもOKです！最初はSlackでカジュアルにアイディアを投稿しても大丈夫です。
             </p>
-            <a
-              class="button is-white"
-              href="https://github.com/camphor-/lab/issues"
-              target="_blank"
-            >
-              <span class="button-inner">
-                Issueを見る
-              </span>
-            </a>
+            <primary-button
+              :path="'https://github.com/camphor-/lab/issues'"
+              :text="'Issueを見る'"
+            ></primary-button>
           </div>
         </div>
       </div>
@@ -75,15 +70,10 @@
         <div>
           Issueでアイディアを探しましょう。参加したいアイディアを見つけたら、コメントしましょう！
         </div>
-        <a
-          class="button is-white"
-          href="https://github.com/camphor-/lab/issues"
-          target="_blank"
-        >
-          <span class="button-inner">
-            Issueを見る
-          </span>
-        </a>
+        <primary-button
+          :path="'https://github.com/camphor-/lab/issues'"
+          :text="'Issueを見る'"
+        ></primary-button>
       </div>
     </div>
   </div>
