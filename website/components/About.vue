@@ -8,15 +8,10 @@
           Org.でlabチームに招待します。 CAMPHOR-
           のSlackに入っていない場合はCAMPHOR- HOUSE に遊びに来てください！
         </p>
-        <a
-          class="show-schedule button is-white"
-          href="https://camph.net/schedule/"
-          target="_blank"
-        >
-          <span class="button-inner">
-            開館スケジュールを見る
-          </span>
-        </a>
+        <primary-button
+          :path="'https://camph.net/schedule/'"
+          :text="'開館スケジュールを見る'"
+        ></primary-button>
       </div>
       <div id="suggestion" v-in-viewport class="section new-idea">
         <h2 class="title">新しいアイディアを提案する</h2>
@@ -117,37 +112,6 @@
   }
 }
 
-.button {
-  margin-top: 10px;
-  border-radius: 0;
-  transition: color 0.2s;
-  color: white;
-  background-image: linear-gradient(60deg, orange, #ff001d);
-  background-repeat: no-repeat;
-  &::before {
-    transition: 0.5s ease;
-    transition-property: opacity;
-    background-image: linear-gradient(60deg, #ff001d, orange);
-    opacity: 0;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-  }
-  &:hover {
-    color: white;
-    &::before {
-      opacity: 1;
-    }
-  }
-  > .button-inner {
-    z-index: 2;
-  }
-}
-
 .section {
   opacity: 0.5;
   visibility: hidden;
@@ -161,3 +125,9 @@
   transform: translateY(0px);
 }
 </style>
+<script>
+import PrimaryButton from '@/components/PrimaryButton'
+export default {
+  components: { PrimaryButton }
+}
+</script>
