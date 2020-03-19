@@ -24,6 +24,13 @@ export default {
       isTop: true
     }
   },
+  watch: {
+    isTop() {
+      if (this.isTop) {
+        location.replace('#')
+      }
+    }
+  },
   mounted() {
     const that = this
     document
