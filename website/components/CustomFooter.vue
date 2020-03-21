@@ -2,23 +2,43 @@
   <div>
     <footer class="footer-root">
       <div class="links">
-        <p>
-          <a>GitHub</a>
-        </p>
-        <p>
-          <a>CAMPHOR-</a>
-        </p>
-        <p>
-          <a>Twitter</a>
-        </p>
-        <p>
-          <a>Facebook</a>
+        <p v-for="(link, idx) in links" :key="idx">
+          <a :href="link.href" :target="link.target">
+            {{ link.title }}
+          </a>
         </p>
       </div>
       <div class="has-text-centered">©2020 CAMPHOR-</div>
     </footer>
   </div>
 </template>
+<script>
+const links = [
+  {
+    title: 'GitHub of CAMPHOR- Lab',
+    href: 'https://github.com/camphor-/lab',
+    target: '_blank'
+  },
+  { title: 'CAMPHOR-', href: 'https://camph.net/', target: '_blank' },
+  {
+    title: 'Twitter',
+    href: 'https://twitter.com/CamphorKyoto',
+    target: '_blank'
+  },
+  {
+    title: 'Facebook',
+    href: 'https://www.facebook.com/Camphorcamphor/',
+    target: '_blank'
+  }
+]
+export default {
+  data() {
+    return {
+      links
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .footer-root {
