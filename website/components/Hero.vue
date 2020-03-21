@@ -78,6 +78,7 @@ export default {}
       left: 400px;
       visibility: hidden;
       transition: all 1s;
+      transform: translate3d(200px, 100px, 0);
 
       > img {
         position: absolute;
@@ -86,7 +87,7 @@ export default {}
 
       &.in-viewport {
         visibility: visible;
-        transform: translate3d(-200px, 150px, -40px) scale(1.2);
+        transform: translate3d(-400px, 0px, 20px) scale(0.8);
       }
     }
   }
@@ -110,14 +111,14 @@ export default {}
         left: 200px;
         margin: 0 auto;
         max-width: 500px;
-        transform: translate3d(0, 30px, 0);
+        transform: translate3d(300px, 90px, 0);
 
         > img {
           position: relative;
         }
 
         &.in-viewport {
-          transform: translate3d(-200px, 150px, -10px) scale(1.2);
+          transform: translate3d(-200px, -100px, 20px) scale(0.8);
         }
       }
     }
