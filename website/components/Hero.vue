@@ -3,7 +3,7 @@
     <div class="hero-background"></div>
     <div class="lab-hero">
       <div class="columns is-variable is-5 is-desktop">
-        <div v-in-viewport class="lab-title column has-text-white">
+        <div v-in-viewport.once class="lab-title column has-text-white">
           <h1 class="is-size-1">CAMPHOR- Lab</h1>
           <p class="is-size-4">アイディアを形にしよう</p>
           <p>
@@ -12,7 +12,7 @@
             のリソースを使って開発することもできます!
           </p>
         </div>
-        <div v-in-viewport class="camphor-lab-image column">
+        <div v-in-viewport.once class="camphor-lab-image column">
           <img alt="CAMPHOR- Lab" src="@/assets/camphor-oss.svg" />
         </div>
       </div>
