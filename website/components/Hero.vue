@@ -63,7 +63,7 @@ export default {}
       justify-content: center;
       padding-left: 5vw;
       visibility: hidden;
-      transform: translateX(-150px);
+      transform: translate3d(-700px, 50px, 0);
       transition: all 1s;
 
       &.in-viewport {
@@ -77,7 +77,7 @@ export default {}
       position: relative;
       left: 40px;
       visibility: hidden;
-      transform: translateX(150px);
+      transform: translate3d(700px, 0, 0);
       transition: all 1s;
 
       > img {
