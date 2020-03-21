@@ -75,6 +75,26 @@
           :text="'Issueを見る'"
         ></primary-button>
       </div>
+      <div id="about-camphor" v-in-viewport class="section about-camphor">
+        <h2 class="title">CAMPHOR- について</h2>
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="@/assets/camphor.png" alt="CAMPHOR-" />
+          </div>
+          <div class="column">
+            <div>
+              京都のエンジニアやデザイナーを目指す学生のためのコミュニティです。
+              エンジニアリング・デザイン・プロダクト開発などへの関心を共通点とする、
+              様々なバックグラウンドを持つ学生が集まっています。 CAMPHOR-
+              HOUSEというコミュニティスペースを運営や、技術系イベントを開催しています。
+            </div>
+            <primary-button
+              :path="'https://camph.net'"
+              :text="'CAMPHOR- のページ'"
+            ></primary-button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
