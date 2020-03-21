@@ -46,7 +46,7 @@ const menuItems = [
   { title: '提案する', href: '#suggestion', target: '' },
   { title: 'リソース', href: '#resources', target: '' },
   { title: 'プロジェクト', href: '#projects', target: '' },
-  { title: 'CAMPHOR- について', href: 'https://camph.net', target: '_blank' }
+  { title: 'CAMPHOR- について', href: '#about-camphor', target: '' }
 ]
 
 export default {
