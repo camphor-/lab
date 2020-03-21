@@ -3,7 +3,7 @@
     <div class="hero-background"></div>
     <div class="lab-hero">
       <div class="columns is-variable is-5 is-desktop">
-        <div v-in-viewport.once class="lab-title column has-text-white">
+        <div v-in-viewport class="lab-title column has-text-white">
           <h1 class="is-size-1">CAMPHOR- Lab</h1>
           <p class="is-size-4">アイディアを形にしよう</p>
           <p>
@@ -12,7 +12,7 @@
             のリソースを使って開発することもできます!
           </p>
         </div>
-        <div v-in-viewport.once class="camphor-lab-image column">
+        <div v-in-viewport class="camphor-lab-image column">
           <img alt="CAMPHOR- Lab" src="@/assets/camphor-oss.svg" />
         </div>
       </div>
@@ -63,7 +63,7 @@ export default {}
       justify-content: center;
       padding-left: 5vw;
       visibility: hidden;
-      transform: translate3d(-700px, 50px, 0);
+      transform: translate3d(-300px, 50px, 0);
       transition: all 1s;
 
       &.in-viewport {
@@ -75,9 +75,8 @@ export default {}
     > .camphor-lab-image {
       height: 100%;
       position: relative;
-      left: 40px;
+      left: 400px;
       visibility: hidden;
-      transform: translate3d(700px, 0, 0);
       transition: all 1s;
 
       > img {
@@ -87,7 +86,7 @@ export default {}
 
       &.in-viewport {
         visibility: visible;
-        transform: translate3d(200px, 150px, -40px) scale(1.2);
+        transform: translate3d(-200px, 150px, -40px) scale(1.2);
       }
     }
   }
@@ -101,20 +100,24 @@ export default {}
       > .lab-title {
         height: 450px;
         padding: 0 20px;
+        transform: translate3d(-300px, -40px, 0);
         &.in-viewport {
-          transform: translate(0, -50px) translateZ(20px) scale(0.8);
+          transform: translate3d(0, -80px, 20px) scale(0.8);
         }
       }
 
       > .camphor-lab-image {
-        left: 0;
+        left: 200px;
         margin: 0 auto;
         max-width: 500px;
+        transform: translate3d(0, 30px, 0);
+
         > img {
           position: relative;
         }
+
         &.in-viewport {
-          transform: translate3d(0px, 150px, -10px) scale(1.2);
+          transform: translate3d(-200px, 150px, -10px) scale(1.2);
         }
       }
     }
