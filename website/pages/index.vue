@@ -5,25 +5,7 @@
     <div id="parallax-root">
       <hero />
       <about />
-      <div>
-        <footer class="footer-root">
-          <div class="links">
-            <p>
-              <a>GitHub</a>
-            </p>
-            <p>
-              <a>CAMPHOR-</a>
-            </p>
-            <p>
-              <a>Twitter</a>
-            </p>
-            <p>
-              <a>Facebook</a>
-            </p>
-          </div>
-          <div class="has-text-centered">©2020 CAMPHOR-</div>
-        </footer>
-      </div>
+      <custom-footer />
     </div>
   </div>
 </template>
@@ -31,13 +13,15 @@
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import About from '@/components/About'
+import CustomFooter from '@/components/CustomFooter'
 import { smoothScrollTo } from '@/plugins/smooth_scroll'
 
 export default {
   components: {
     Hero,
     Navbar,
-    About
+    About,
+    CustomFooter
   },
   data() {
     return {
@@ -75,17 +59,5 @@ export default {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-.footer-root {
-  padding: 20px 50px;
-  background: #eee;
-  > .links a {
-    line-height: 2;
-    color: #555;
-    &:hover {
-      color: #777;
-    }
-  }
 }
 </style>
