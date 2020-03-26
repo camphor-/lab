@@ -98,6 +98,14 @@
     </div>
   </div>
 </template>
+
+<script>
+import PrimaryButton from '@/components/PrimaryButton'
+export default {
+  components: { PrimaryButton }
+}
+</script>
+
 <style lang="scss" scoped>
 .about-root {
   background-color: white;
@@ -126,9 +134,3 @@
   }
 }
 </style>
-<script>
-import PrimaryButton from '@/components/PrimaryButton'
-export default {
-  components: { PrimaryButton }
-}
-</script>
