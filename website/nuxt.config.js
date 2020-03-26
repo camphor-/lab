@@ -1,3 +1,6 @@
+const description =
+  'CAMPHOR- Lab はプロダクトを作りたい学生やプロジェクトを始めたい学生が集まるグループです。自分の考えるアイディアを提案し、共感する仲間を集めましょう。興味のあるプロジェクトを見つけたら参加して一緒に作業をしましょう。CAMPHOR- のリソースを使って開発することもできます!'
+
 export default {
   mode: 'universal',
   /*
@@ -11,8 +14,21 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'CAMPHOR- Lab はプロダクトを作りたい学生やプロジェクトを始めたい学生が集まるグループです。自分の考えるアイディアを提案し、共感する仲間を集めましょう。興味のあるプロジェクトを見つけたら参加して一緒に作業をしましょう。CAMPHOR- のリソースを使って開発することもできます!'
+        content: description
+      },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'CAMPHOR- Lab' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://lab.camph.net' },
+      { hid: 'og:title', property: 'og:title', content: 'CAMPHOR- Lab' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: description
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/ogp.png'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
