@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <footer class="footer-root">
-      <div class="links">
-        <p v-for="(link, idx) in links" :key="idx">
-          <a :href="link.href" :target="link.target">
-            {{ link.title }}
-          </a>
-        </p>
-      </div>
-      <div class="has-text-centered">©2020 CAMPHOR-</div>
-    </footer>
-  </div>
+  <footer class="footer-root">
+    <div class="links">
+      <p v-for="(link, idx) in links" :key="idx">
+        <a :href="link.href" :target="link.target">
+          {{ link.title }}
+        </a>
+      </p>
+    </div>
+    <div class="has-text-centered">©2020 CAMPHOR-</div>
+  </footer>
 </template>
 <script>
 const links = [
