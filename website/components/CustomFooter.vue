@@ -55,6 +55,10 @@ export default {
 .footer-root {
   padding: 20px 50px 10px;
   background: #eee;
+  > .columns {
+    max-width: 900px;
+    margin: 0 auto;
+  }
   .list-items a {
     line-height: 2;
     color: #555;
