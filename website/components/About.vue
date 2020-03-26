@@ -1,7 +1,7 @@
 <template>
   <div class="about-root">
     <div class="container">
-      <div id="join" v-in-viewport class="section join">
+      <section id="join" v-in-viewport class="section join">
         <h2 class="title">CAMPHOR- Lab に参加する</h2>
         <p>
           CAMPHOR- のSlackの #lab チャンネルに参加してください。GitHubのCAMPHOR-
@@ -12,8 +12,8 @@
           :path="'https://camph.net/schedule/'"
           :text="'開館スケジュールを見る'"
         ></primary-button>
-      </div>
-      <div id="suggestion" v-in-viewport class="section new-idea">
+      </section>
+      <section id="suggestion" v-in-viewport class="section new-idea">
         <h2 class="title">新しいアイディアを提案する</h2>
         <div class="columns is-vcentered">
           <div class="column is-two-fifths">
@@ -35,8 +35,8 @@
             ></primary-button>
           </div>
         </div>
-      </div>
-      <div id="resources" v-in-viewport class="section resources">
+      </section>
+      <section id="resources" v-in-viewport class="section resources">
         <h2 class="title">CAMPHOR- のリソースを使う</h2>
         <div class="columns is-vcentered">
           <div class="column">
@@ -64,8 +64,8 @@
             />
           </div>
         </div>
-      </div>
-      <div id="projects" v-in-viewport class="section projects">
+      </section>
+      <section id="projects" v-in-viewport class="section projects">
         <h2 class="title">プロジェクトに参加する</h2>
         <div>
           Issueでアイディアを探しましょう。参加したいアイディアを見つけたら、コメントしましょう！
@@ -74,8 +74,8 @@
           :path="'https://github.com/camphor-/lab/issues'"
           :text="'Issueを見る'"
         ></primary-button>
-      </div>
-      <div id="about-camphor" v-in-viewport class="section about-camphor">
+      </section>
+      <section id="about-camphor" v-in-viewport class="section about-camphor">
         <h2 class="title">CAMPHOR- について</h2>
         <div class="columns is-vcentered">
           <div class="column">
@@ -94,7 +94,7 @@
             ></primary-button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
@@ -105,8 +105,17 @@
   > .container {
     max-width: 900px;
     padding: 0 10px;
-    > div {
+    > .section {
       margin-bottom: 30px;
+      opacity: 0.5;
+      visibility: hidden;
+      transform: translateY(50px);
+      transition: all 1s ease;
+      &.in-viewport {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+      }
     }
 
     > .resources {
@@ -115,19 +124,6 @@
       }
     }
   }
-}
-
-.section {
-  opacity: 0.5;
-  visibility: hidden;
-  transform: translateY(50px);
-  transition: all 1s ease;
-}
-
-.section.in-viewport {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
 }
 </style>
 <script>
