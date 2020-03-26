@@ -10,8 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - run: cd website
 
     - name: setup node
       uses: actions/setup-node@v1
@@ -24,7 +22,7 @@ jobs:
         working-directory: website
     
     - name: generate
-      run: yarn generate
+      run: cd website && yarn generate
     
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
