@@ -2,7 +2,7 @@
   <footer class="footer-root">
     <div class="links">
       <p v-for="(link, idx) in links" :key="idx">
-        <a :href="link.href" :target="link.target">
+        <a :href="link.href" :target="link.target" rel="noopener noreferrer">
           {{ link.title }}
         </a>
       </p>
