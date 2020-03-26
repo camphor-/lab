@@ -1,0 +1,33 @@
+name: deploy website
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - run: cd website
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        
+    # ~/.cache/yarnはキャッシュされる
+    - uses: bahmutov/npm-install@v1
+    
+    - name: generate
+      run: yarn generate
+    
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./website/dist
+      
+    
