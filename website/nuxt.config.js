@@ -16,7 +16,11 @@ export default {
         name: 'description',
         content: description
       },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'CAMPHOR- Lab' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'CAMPHOR- Lab'
+      },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://lab.camph.net' },
       { hid: 'og:title', property: 'og:title', content: 'CAMPHOR- Lab' },
