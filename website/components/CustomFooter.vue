@@ -1,12 +1,12 @@
 <template>
   <footer class="footer-root">
-    <div class="links">
-      <p v-for="(link, idx) in links" :key="idx">
+    <ul class="links">
+      <li v-for="(link, idx) in links" :key="idx">
         <a :href="link.href" :target="link.target" rel="noopener noreferrer">
           {{ link.title }}
         </a>
-      </p>
-    </div>
+      </li>
+    </ul>
     <div class="has-text-centered">©2020 CAMPHOR-</div>
   </footer>
 </template>
