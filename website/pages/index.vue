@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <navbar :is-top="isTop" />
     <!--  #parallax-root の外は実質fixedになります。パララックス効果を実現するためにhtmlはoverflow-y: hidden;になっています。  -->
     <div id="parallax-root">
@@ -53,6 +53,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.root {
+  background: linear-gradient(60deg, #ff001d, orange);
+}
+
 #parallax-root {
   perspective: 100px;
   perspective-origin: top center;

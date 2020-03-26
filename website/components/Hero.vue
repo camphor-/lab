@@ -32,7 +32,6 @@ export default {}
   top: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(60deg, #ff001d, orange);
 }
 
 .lab-hero {
