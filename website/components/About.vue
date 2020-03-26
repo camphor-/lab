@@ -17,10 +17,7 @@
         <h2 class="title">新しいアイディアを提案する</h2>
         <div class="columns is-vcentered">
           <div class="column is-two-fifths">
-            <img
-              src="https://github.com/camphor-/lab/raw/master/assets/connect-idea.png"
-              alt="new-idea"
-            />
+            <img src="@/assets/connect-idea.png" alt="new-idea" />
           </div>
           <div class="column">
             <p>
@@ -58,10 +55,7 @@
             </div>
           </div>
           <div class="column">
-            <img
-              src="https://github.com/camphor-/lab/raw/master/assets/available-resources.png"
-              alt="resources"
-            />
+            <img src="@/assets/available-resources.png" alt="resources" />
           </div>
         </div>
       </section>
