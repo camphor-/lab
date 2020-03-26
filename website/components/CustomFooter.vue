@@ -1,12 +1,25 @@
 <template>
   <footer class="footer-root">
-    <ul class="links">
-      <li v-for="(link, idx) in links" :key="idx">
-        <a :href="link.href" :target="link.target" rel="noopener noreferrer">
-          {{ link.title }}
-        </a>
-      </li>
-    </ul>
+    <div class="columns">
+      <ul class="column list-items">
+        <li v-for="(link, idx) in links" :key="idx">
+          <a :href="link.href" :target="link.target" rel="noopener noreferrer">
+            {{ link.title }}
+          </a>
+        </li>
+      </ul>
+      <ul class="column lisences">
+        <li>
+          Illustrations by
+          <a
+            href="https://www.humaaans.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >humaaans.com</a
+          >
+        </li>
+      </ul>
+    </div>
     <div class="has-text-centered">&copy;2020 CAMPHOR-</div>
   </footer>
 </template>
@@ -42,7 +55,7 @@ export default {
 .footer-root {
   padding: 20px 50px 10px;
   background: #eee;
-  > .links a {
+  .list-items a {
     line-height: 2;
     color: #555;
     &:hover {
