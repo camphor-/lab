@@ -7,7 +7,7 @@
         </a>
       </li>
     </ul>
-    <div class="has-text-centered">©2020 CAMPHOR-</div>
+    <div class="has-text-centered">&copy;2020 CAMPHOR-</div>
   </footer>
 </template>
 <script>
