@@ -20,6 +20,8 @@ jobs:
         
     # ~/.cache/yarnはキャッシュされる
     - uses: bahmutov/npm-install@v1
+      with:
+        working-directory: website
     
     - name: generate
       run: yarn generate
