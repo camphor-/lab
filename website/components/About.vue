@@ -117,11 +117,6 @@
   }
 }
 
-.join {
-  > .show-schedule {
-  }
-}
-
 .section {
   opacity: 0.5;
   visibility: hidden;
