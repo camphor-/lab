@@ -13,8 +13,8 @@
         <span aria-hidden="true"></span>
       </a>
       <div class="navbar-menu">
-        <div class="navbar-end">
-          <div v-for="(item, idx) in menuItems" :key="idx" class="navbar-item">
+        <ul class="navbar-end">
+          <li v-for="(item, idx) in menuItems" :key="idx" class="navbar-item">
             <a
               v-smooth-scroll
               class="navbar-button"
@@ -23,8 +23,8 @@
             >
               {{ item.title }}
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
     <div>
