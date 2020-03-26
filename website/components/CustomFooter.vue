@@ -30,9 +30,9 @@ const links = [
   }
 ]
 export default {
-  data() {
-    return {
-      links
+  computed: {
+    links() {
+      return links
     }
   }
 }
