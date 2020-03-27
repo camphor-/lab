@@ -75,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  position: fixed;
+  position: absolute;
   z-index: 2;
   background: transparent;
   width: 100vw;
