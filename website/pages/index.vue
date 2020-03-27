@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <navbar :is-top="isTop" />
-    <hero />
+    <hero :scroll-y="scrollY" />
     <about />
     <custom-footer />
   </div>

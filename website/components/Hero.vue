@@ -2,7 +2,11 @@
   <div class="hero-background">
     <div class="lab-hero">
       <div class="columns is-variable is-5 is-desktop">
-        <div v-in-viewport.once class="hero-description column has-text-white">
+        <div
+          v-in-viewport.once
+          :style="{ bottom: scrollY * 0.1 + 'px' }"
+          class="hero-description column has-text-white"
+        >
           <h1 class="hero-title">CAMPHOR- Lab</h1>
           <p class="is-size-4">アイディアを形にしよう</p>
           <p>
@@ -11,7 +15,11 @@
             のリソースを使って開発することもできます!
           </p>
         </div>
-        <div v-in-viewport.once class="camphor-lab-image column">
+        <div
+          v-in-viewport.once
+          :style="{ top: scrollY * 0.1 + 'px' }"
+          class="camphor-lab-image column"
+        >
           <img alt="CAMPHOR- Lab" src="@/assets/camphor-oss.svg" />
         </div>
       </div>
@@ -21,7 +29,12 @@
 
 <script>
 export default {
-  mounted() {}
+  props: {
+    scrollY: {
+      type: Number,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -62,7 +75,7 @@ export default {
       position: relative;
       bottom: 50px;
       right: 400px;
-      transition: all 1s;
+      transition: right 1s;
 
       &.in-viewport {
         visibility: visible;
@@ -79,7 +92,7 @@ export default {
       position: relative;
       left: 400px;
       visibility: hidden;
-      transition: all 1s;
+      transition: left 1s;
 
       > img {
         position: absolute;
