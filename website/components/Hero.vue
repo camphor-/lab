@@ -39,13 +39,13 @@ export default {}
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  bottom: 0;
+  top: 15px;
   width: 100vw;
   height: 40vw;
   align-items: center;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 5vw;
+  padding-top: 5vw;
   padding-bottom: 10vw;
   box-sizing: content-box;
 

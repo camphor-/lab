@@ -1,12 +1,9 @@
 <template>
   <div class="root">
     <navbar :is-top="isTop" />
-    <!--  #parallax-root の外は実質fixedになります。パララックス効果を実現するためにhtmlはoverflow-y: hidden;になっています。  -->
-    <div id="parallax-root">
-      <hero />
-      <about />
-      <custom-footer />
-    </div>
+    <hero />
+    <about />
+    <custom-footer />
   </div>
 </template>
 <script>
@@ -37,11 +34,9 @@ export default {
   },
   mounted() {
     const that = this
-    document
-      .getElementById('parallax-root')
-      .addEventListener('scroll', function() {
-        that.isTop = this.scrollTop < 50
-      })
+    window.addEventListener('scroll', function() {
+      that.isTop = window.scrollY < 50
+    })
 
     if (document.getElementById(location.hash.substring(1))) {
       const scrollTo = document.getElementById(location.hash.substring(1))
@@ -55,13 +50,5 @@ export default {
 <style lang="scss" scoped>
 .root {
   background: linear-gradient(60deg, #ff001d, orange);
-}
-
-#parallax-root {
-  perspective: 100px;
-  perspective-origin: top center;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 </style>
