@@ -60,7 +60,7 @@ export default {
 #parallax-root {
   perspective: 100px;
   perspective-origin: top center;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
