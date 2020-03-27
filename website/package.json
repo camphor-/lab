@@ -18,8 +18,8 @@
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vue-in-viewport-directive": "^2.0.0",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-in-viewport-directive": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

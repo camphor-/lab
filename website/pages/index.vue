@@ -40,8 +40,7 @@ export default {
 
     if (document.getElementById(location.hash.substring(1))) {
       const scrollTo = document.getElementById(location.hash.substring(1))
-      const scrollRoot = document.getElementById('parallax-root')
-      smoothScrollTo(scrollTo, { scrollRoot })
+      smoothScrollTo(scrollTo, {})
     }
   }
 }

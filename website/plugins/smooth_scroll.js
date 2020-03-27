@@ -2,10 +2,7 @@
 
 import Vue from 'vue'
 
-export function smoothScrollTo(
-  scrollTo,
-  { duration = 1000, offset = 0, scrollRoot = window }
-) {
+export function smoothScrollTo(scrollTo, { duration = 1000, offset = 0 }) {
   const clock = Date.now()
 
   // Get the top position of an element in the document
@@ -15,7 +12,7 @@ export function smoothScrollTo(
       ? -window.pageYOffset
       : Math.min(
           scrollTo.getBoundingClientRect().top + window.pageYOffset,
-          scrollRoot.scrollHeight - window.innerHeight
+          document.documentElement.scrollHeight - window.innerHeight
         )
 
   // Adjusts offset from the end
@@ -44,14 +41,13 @@ export function smoothScrollTo(
       location.replace('#' + scrollTo.id)
       // this will cause the :target to be activated.
     }
-    scrollRoot.scroll(0, position)
+    window.scroll(0, position)
   }
   step()
 }
 
 Vue.directive('smooth-scroll', {
   inserted(el, binding) {
-    const scrollRoot = document.getElementById('parallax-root')
     // Do not initialize smoothScroll when running server side, handle it in client
     // We do not want this script to be applied in browsers that do not support those
     // That means no smoothscroll on IE9 and below.
@@ -85,8 +81,7 @@ Vue.directive('smooth-scroll', {
 
       smoothScrollTo(scrollTo, {
         duration,
-        offset,
-        scrollRoot
+        offset
       })
     })
   }
