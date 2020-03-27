@@ -22,22 +22,34 @@ export default {
   },
   data() {
     return {
-      isTop: true
+      scrollY: 0
+    }
+  },
+  computed: {
+    isTop() {
+      return this.scrollY < 50
     }
   },
   watch: {
     isTop() {
       if (this.isTop) {
-        location.replace('#')
+        // トップにスクロールした際にアンカーリンクを削除
+        window.history.replaceState(
+          null,
+          '',
+          location.pathname + location.search
+        )
       }
     }
   },
   mounted() {
+    // スクロール位置を取得
     const that = this
     window.addEventListener('scroll', function() {
-      that.isTop = window.scrollY < 50
+      that.scrollY = window.scrollY
     })
 
+    // アンカーリンクがあったらその位置までスクロール
     if (document.getElementById(location.hash.substring(1))) {
       const scrollTo = document.getElementById(location.hash.substring(1))
       smoothScrollTo(scrollTo, {})

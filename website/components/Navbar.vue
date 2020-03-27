@@ -27,7 +27,7 @@
         </ul>
       </div>
     </nav>
-    <div v-if="false">
+    <div>
       <div v-if="showMenu" class="menu-bg" @click="onClickMenuBg"></div>
       <div class="menu" :class="{ 'menu-visible': showMenu }">
         <ul class="menu-list">
