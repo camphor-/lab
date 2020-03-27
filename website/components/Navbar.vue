@@ -27,12 +27,14 @@
         </ul>
       </div>
     </nav>
-    <div>
+    <div v-if="false">
       <div v-if="showMenu" class="menu-bg" @click="onClickMenuBg"></div>
       <div class="menu" :class="{ 'menu-visible': showMenu }">
         <ul class="menu-list">
           <li v-for="(item, idx) in menuItems" :key="idx">
-            <a :href="item.href" :target="item.target">{{ item.title }}</a>
+            <a v-smooth-scroll :href="item.href" :target="item.target">{{
+              item.title
+            }}</a>
           </li>
         </ul>
       </div>
@@ -81,7 +83,7 @@ export default {
   width: 100vw;
   padding: 15px;
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.5s;
   transform: translateY(-100px);
 
   &.navbar-visible {
