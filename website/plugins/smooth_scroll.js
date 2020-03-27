@@ -7,16 +7,13 @@ export function smoothScrollTo(scrollTo, { duration = 1000, offset = 0 }) {
 
   // Get the top position of an element in the document
   // return value of html.getBoundingClientRect().top ... IE : 0, other browsers : -pageYOffset
-  let end =
+  const end =
     scrollTo.nodeName === 'HTML'
       ? -window.pageYOffset
       : Math.min(
-          scrollTo.getBoundingClientRect().top + window.pageYOffset,
+          scrollTo.getBoundingClientRect().top + window.pageYOffset + offset,
           document.documentElement.scrollHeight - window.innerHeight
         )
-
-  // Adjusts offset from the end
-  end += offset
 
   // we use requestAnimationFrame to be called by the browser before every repaint
   const requestAnimationFrame =
@@ -38,8 +35,8 @@ export function smoothScrollTo(scrollTo, { duration = 1000, offset = 0 }) {
         (end - window.pageYOffset) * easeInOutCubic(elapsed / duration)
       requestAnimationFrame(step)
     } else {
-      location.replace('#' + scrollTo.id)
       // this will cause the :target to be activated.
+      window.history.replaceState(null, '', '#' + scrollTo.id)
     }
     window.scroll(0, position)
   }
