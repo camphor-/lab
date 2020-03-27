@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <div class="hero-background"></div>
+  <div class="hero-background">
     <div class="lab-hero">
       <div class="columns is-variable is-5 is-desktop">
-        <div v-in-viewport.once class="lab-title column has-text-white">
-          <h1 class="is-size-1">CAMPHOR- Lab</h1>
+        <div v-in-viewport.once class="hero-description column has-text-white">
+          <h1 class="hero-title">CAMPHOR- Lab</h1>
           <p class="is-size-4">アイディアを形にしよう</p>
           <p>
             CAMPHOR- Lab
@@ -26,11 +25,6 @@ export default {}
 
 <style lang="scss" scoped>
 .hero-background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
 
@@ -55,19 +49,26 @@ export default {}
     justify-content: center;
     align-items: center;
 
-    > .lab-title {
+    > .hero-description {
       display: flex;
       flex-flow: column nowrap;
       height: 100%;
       justify-content: center;
       padding-left: 5vw;
+      padding-top: 0;
       visibility: hidden;
-      transform: translate3d(-300px, 50px, 0);
+      position: relative;
+      bottom: 50px;
+      right: 400px;
       transition: all 1s;
 
       &.in-viewport {
         visibility: visible;
-        transform: translate3d(30px, -40px, 20px) scale(0.8);
+        right: 0;
+      }
+
+      > .hero-title {
+        font-size: 2.4rem;
       }
     }
 
@@ -77,7 +78,6 @@ export default {}
       left: 400px;
       visibility: hidden;
       transition: all 1s;
-      transform: translate3d(50px, 100px, 0);
 
       > img {
         position: absolute;
@@ -86,7 +86,7 @@ export default {}
 
       &.in-viewport {
         visibility: visible;
-        transform: translate3d(-450px, 0px, 20px) scale(0.8);
+        left: 0;
       }
     }
   }
@@ -97,12 +97,10 @@ export default {}
     background-image: url('~assets/hero_bottom_s.svg');
     height: 730px;
     > .columns {
-      > .lab-title {
+      > .hero-description {
         height: 450px;
         padding: 0 20px;
-        transform: translate3d(-300px, -40px, 0);
         &.in-viewport {
-          transform: translate3d(0, -80px, 20px) scale(0.8);
         }
       }
 
@@ -110,14 +108,12 @@ export default {}
         left: 200px;
         margin: 0 auto;
         max-width: 500px;
-        transform: translate3d(120px, 90px, 0);
 
         > img {
           position: relative;
         }
 
         &.in-viewport {
-          transform: translate3d(-200px, -100px, 20px) scale(0.8);
         }
       }
     }
