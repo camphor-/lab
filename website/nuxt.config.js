@@ -35,7 +35,11 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/ogp.png'
+        content: 'https://lab.camph.net/ogp.png'
+      },
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

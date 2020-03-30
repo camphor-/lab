@@ -1,12 +1,9 @@
 <template>
   <div class="root">
     <navbar :is-top="isTop" />
-    <!--  #parallax-root の外は実質fixedになります。パララックス効果を実現するためにhtmlはoverflow-y: hidden;になっています。  -->
-    <div id="parallax-root">
-      <hero />
-      <about />
-      <custom-footer />
-    </div>
+    <hero :scroll-y="scrollY" />
+    <about />
+    <custom-footer />
   </div>
 </template>
 <script>
@@ -25,28 +22,37 @@ export default {
   },
   data() {
     return {
-      isTop: true
+      scrollY: 0
+    }
+  },
+  computed: {
+    isTop() {
+      return this.scrollY < 50
     }
   },
   watch: {
     isTop() {
       if (this.isTop) {
-        location.replace('#')
+        // トップにスクロールした際にアンカーリンクを削除
+        window.history.replaceState(
+          null,
+          '',
+          location.pathname + location.search
+        )
       }
     }
   },
   mounted() {
+    // スクロール位置を取得
     const that = this
-    document
-      .getElementById('parallax-root')
-      .addEventListener('scroll', function() {
-        that.isTop = this.scrollTop < 50
-      })
+    window.addEventListener('scroll', function() {
+      that.scrollY = window.scrollY
+    })
 
+    // アンカーリンクがあったらその位置までスクロール
     if (document.getElementById(location.hash.substring(1))) {
       const scrollTo = document.getElementById(location.hash.substring(1))
-      const scrollRoot = document.getElementById('parallax-root')
-      smoothScrollTo(scrollTo, { scrollRoot })
+      smoothScrollTo(scrollTo, {})
     }
   }
 }
@@ -55,13 +61,5 @@ export default {
 <style lang="scss" scoped>
 .root {
   background: linear-gradient(60deg, #ff001d, orange);
-}
-
-#parallax-root {
-  perspective: 100px;
-  perspective-origin: top center;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 </style>
