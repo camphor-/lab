@@ -12,10 +12,13 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: lab
-        SLACK_FOOTER: ${{ github.event.project_card.url }}
-        SLACK_TITLE: Project Card Added
+        SLACK_USERNAME: GitHub
+        SLACK_ICON: https://i.gyazo.com/5aacf4c6d3c401826a0423fd8a8e6559.png
+        SLACK_FOOTER: https://github.com/${{ github.repository }}/projects/1#card-${{ github.event.project_card.id }}
+        SLACK_TITLE: Projects (YouTube)
         SLACK_MESSAGE: |
-          ${{ github.event.project_card.url }}
+          https://github.com/${{ github.repository }}/projects/1#card-${{ github.event.project_card.id }}
           ${{ github.event.project_card.note }}
         MSG_MINIMAL: true
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+      if: ${{ github.event.project_card.project_url == 'https://api.github.com/projects/12351178' }}
