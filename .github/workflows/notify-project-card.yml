@@ -1,8 +1,8 @@
-name: CI
+name: Notify Project Card Events
 
 on:
   project_card:
-    types: [opened, deleted]
+    types: [opened]
 
 jobs:
   notify:
@@ -12,8 +12,10 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: lab
-        SLACK_FOOTER: ""
+        SLACK_FOOTER: ${{ github.event.url }}
         SLACK_TITLE: Project Card Added
-        SLACK_MESSAGE: ${{ github.event.url }}
+        SLACK_MESSAGE: |
+          ${{ github.event.url }}
+          ${{ github.event.note }}
         MSG_MINIMAL: true
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
