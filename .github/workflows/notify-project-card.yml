@@ -12,10 +12,10 @@ jobs:
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_CHANNEL: lab
-        SLACK_FOOTER: ${{ github.event.url }}
+        SLACK_FOOTER: ${{ github.event.project_card.url }}
         SLACK_TITLE: Project Card Added
         SLACK_MESSAGE: |
-          ${{ github.event.url }}
-          ${{ github.event.note }}
+          ${{ github.event.project_card.url }}
+          ${{ github.event.project_card.note }}
         MSG_MINIMAL: true
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
