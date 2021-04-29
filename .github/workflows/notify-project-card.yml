@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  project_card:
+    types: [opened, deleted]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: lab
+        SLACK_FOOTER: ""
+        SLACK_TITLE: Project Card Added
+        SLACK_MESSAGE: ${{ github.event.url }}
+        MSG_MINIMAL: true
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
