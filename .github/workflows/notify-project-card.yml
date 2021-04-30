@@ -17,7 +17,6 @@ jobs:
         SLACK_FOOTER: https://github.com/${{ github.repository }}/projects/1#card-${{ github.event.project_card.id }}
         SLACK_TITLE: Projects (YouTube)
         SLACK_MESSAGE: |
-          https://github.com/${{ github.repository }}/projects/1#card-${{ github.event.project_card.id }}
           ${{ github.event.project_card.note }}
         MSG_MINIMAL: true
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
