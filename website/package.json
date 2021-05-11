@@ -14,22 +14,22 @@
   },
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.1",
-    "marked": "^0.8.0",
-    "node-sass": "^4.13.1",
+    "marked": "^2.0.3",
+    "node-sass": "^5.0.0",
     "nuxt": "^2.0.0",
-    "sass-loader": "^8.0.2",
-    "vue": "latest",
+    "sass-loader": "^10.0.0",
+    "vue": "^2.6.12",
     "vue-in-viewport-directive": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
+    "prettier": "^2.3.0",
     "raw-loader": "^4.0.0"
   }
 }
