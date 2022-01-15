@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.1",
-    "marked": "^2.0.3",
+    "marked": "^4.0.10",
     "node-sass": "^5.0.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^10.0.0",
