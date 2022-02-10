@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.1",
     "marked": "^2.0.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^10.0.0",
     "vue": "^2.6.12",
