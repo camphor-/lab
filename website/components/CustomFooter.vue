@@ -33,7 +33,7 @@ const links = [
   { title: 'CAMPHOR-', href: 'https://camph.net/', target: '_blank' },
   {
     title: 'Twitter',
-    href: 'https://twitter.com/CamphorKyoto',
+    href: 'https://twitter.com/camphor_kyoto',
     target: '_blank'
   },
   {
